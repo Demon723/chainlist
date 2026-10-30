@@ -1,14 +1,14 @@
+// One RPC, deliberately: https://explorer.lxon.in/api/eth-rpc also answers eth_chainId with CORS,
+// but it does not answer net_version and wallets call net_version on connect, so it is not an RPC and
+// listing it would make "add to wallet" fail for the clients that ask. Verified, not assumed.
 export const data = {
   name: 'LXON Mainnet',
   chain: 'LXON',
-  rpc: [
-    'https://rpc.lxon.in',
-    'http://16.171.20.249:8546'
-  ],
+  rpc: ['https://rpc.lxon.in'],
   faucets: [],
   nativeCurrency: {
     name: 'LXON',
-    symbol: 'LXON',
+    symbol: 'XON',
     decimals: 18
   },
   infoURL: 'https://www.lxon.in',
